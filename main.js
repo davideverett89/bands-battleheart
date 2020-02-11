@@ -52,28 +52,23 @@ const printToDom = (divId, domString) => {
 const printAlbumCards = (arr) => {
     let domString = "";
     for (let i = 0; i < arr.length; i++) {
-        domString += `<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 de-card-separate text-center">`;
-        domString +=    `<div id="${arr[i].sku}${arr[i].releaseYear}" class="card de-card de-song-list">`;
-        domString +=        `<img class="de-image" src="${arr[i].image} alt="${arr[i].title}">`;
-        // domString +=        `<div class="card-body">`;
-        // domString +=            `<div id="${arr[i].sku}" class="de-song-list"></div>`;
-        // domString +=        '</div>';
-        domString +=    '</div>';
+        domString += `<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 de-card-divider text-center">`;
+        domString +=    `<div id="${arr[i].sku}${arr[i].releaseYear}" class="card de-card de-song-list"></div>`;
         domString += '</div>';
     }
     printToDom("albumContainer", domString);
 }
 
-//Try to appendChild
-
 const printSongList = (arr, e) => {
-    let domString = "";
+    let firstString = "";
+    let secondString = "";
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[i].songList.length; j++) {
-            domString += `<p class="flex-grow">${arr[i].songList[j]}</p>`;
+            firstString += `<p class="flex-grow-1">${arr[i].songList[j]}</p>`;
         }
-        printToDom(e.target.id, `<div class="d-flex flex-column"><h3>${arr[i].title}</h3>${domString}</div>`);
+        secondString += `<div class="d-inline-flex flex-column justify-content-around de-song-print"><h3>${arr[i].title}</h3>${firstString}</div>`;
     }
+    printToDom(e.target.id, secondString);
 }
 
 const refreshDom = () => {
