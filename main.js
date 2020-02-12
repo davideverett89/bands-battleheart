@@ -41,22 +41,22 @@ const albums = [
     songList: ["Defender of the Parlours", "Immortally Divided", "Twisted through the Wish of the Vanguard", "Echoes of Nomad", "Saving into Mists", "Expanded by Fractal"],
     sku: "44566543"
     },
-    ];
+];
 
 const printToDom = (divId, domString) => {
     let targetDiv = document.getElementById(divId);
     targetDiv.innerHTML = domString;
-    dynamicEvent();
 }
 
 const printAlbumCards = (arr) => {
     let domString = "";
     for (let i = 0; i < arr.length; i++) {
-        domString += `<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 de-card-divider text-center">`;
+        domString += `<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 de-card-divider text-center">`;
         domString +=    `<div id="${arr[i].sku}${arr[i].releaseYear}" class="card de-card de-song-list"></div>`;
         domString += '</div>';
     }
     printToDom("albumContainer", domString);
+    dynamicEvent();
 }
 
 const printSongList = (arr, e) => {
