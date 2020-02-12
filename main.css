@@ -6,7 +6,6 @@
 .body-colors {
     background-color: black;
     color: #fcff02;
-    /* color: white; */
 }
 
 h1, h2, h3, h4, h5 {
@@ -21,6 +20,21 @@ p {
 
 h3 {
     font-style: italic;
+}
+
+.ars-primaryimage {
+    z-index: 1;
+}
+.ars-imageoverlay {
+    position: absolute;
+    top: 500px;
+    left: 200px;
+    z-index: 2;
+}
+
+.ars-button {
+    font-size: 2em;
+    color: yellow;
 }
 
 .ars-bio {
