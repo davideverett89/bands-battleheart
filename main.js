@@ -14,13 +14,6 @@ const albums = [
     sku: "46987095"
     },
     {
-    image: "https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    title: "New Dimension",
-    releaseYear: "2003",
-    songList: ["Iconoclast of Deliverance", "Particles of the Duos", "Silence through the Solstices of the Regeneration", "Extinguishing into Farce", "Piece through the Experiment of the Domain", "Still Limitations Enchanting",],
-    sku: "56342333"
-    },
-    {
     image: "https://images.pexels.com/photos/913215/pexels-photo-913215.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     title: "Take Cover",
     releaseYear: "2005",
@@ -29,10 +22,17 @@ const albums = [
     },
     {
     image: "https://images.pexels.com/photos/627667/pexels-photo-627667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    title: "Cat Got My Tongue",
-    releaseYear: "2006",
+    title: "Cat Got Your Tongue",
+    releaseYear: "2003",
     songList: ["Servants of the Plenitude", "Presumed into Symmetry", "Quick Harvester Whispering", "Crusader of the Consequences", "Heavily Scorched", "Recollection of Compromise"],
     sku: "55647654"
+    },
+    {
+        image: "https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        title: "New Dimension",
+        releaseYear: "2006",
+        songList: ["Iconoclast of Deliverance", "Particles of the Duos", "Silence through the Solstices of the Regeneration", "Extinguishing into Farce", "Piece through the Experiment of the Domain", "Still Limitations Enchanting",],
+        sku: "56342333"
     },
     {
     image: "https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -66,7 +66,7 @@ const printSongList = (arr, e) => {
         for (let j = 0; j < arr[i].songList.length; j++) {
             firstString += `<p class="flex-grow-1">${arr[i].songList[j]}</p>`;
         }
-        secondString += `<div class="d-inline-flex flex-column justify-content-around de-song-print"><h3>${arr[i].title}</h3>${firstString}</div>`;
+        secondString += `<div class="d-inline-flex flex-column justify-content-around de-song-print"><h2>${arr[i].title}</h2>${firstString}<footer><p>Released: <strong>${arr[i].releaseYear}</strong></p></footer></div>`;
     }
     printToDom(e.target.id, secondString);
 }
