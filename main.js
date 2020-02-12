@@ -46,18 +46,22 @@ const printToDom = (divId, textToPrint) => {
 const bioCards = (list) => {
     let domString = "";
     for (i=0; i<list.length; i++) {
-        domString += '<div class="d-flex flex-row mb-3 flex-wrap">';
-            domString += '<div class="flip-card">';
+        domString += '<div class="container">';
+          domString += '<div class="row">';    
+            domString += '<div class="col-sm" width="30%">';  
+              domString += '<div class="flip-card">';
                 domString += '<div class="flip-card-inner">';
                     domString += '<div class="flip-card-front">';
-                        domString += `<img src="${membersCards[i].image}" alt="${membersCards[i].alt}" style="width:300px;height:300px;">`;
+                      domString += `<img src="${membersCards[i].image}" alt="${membersCards[i].alt}" style="width:300px;height:300px;">`;
                     domString += '</div>';
                     domString += '<div class="flip-card-back">';
-                        domString += `<h2>${membersCards[i].name}</h2>`;
-                        domString += `<h3>${membersCards[i].bandRole}</h3>`;
-                        domString += `<p>${membersCards[i].personalBio}</p>`;
+                      domString += `<h2>${membersCards[i].name}</h2>`;
+                      domString += `<h3>${membersCards[i].bandRole}</h3>`;
+                      domString += `<p class="ars-bio"><small>${membersCards[i].personalBio}</small></p>`;
                     domString += '</div>';
+                  domString += '</div>';
                 domString += '</div>';
+              domString += '</div>';
             domString += '</div>';
         domString += '</div>';
     }
@@ -73,50 +77,50 @@ init();
 
 
 
-const tourDates = [
-  {
-    date: 'Fri May 1',
-    venue: 'Lambo Festival 2020'
-    cityState: 'Atlanta, GA. USA',
-  },
-  {
-    date: 'Mon June 10',
-    venue: ' Summer Fest 2020'
-    cityState: 'Chicago, IL. USA',
-  },
-  {
-    date: 'Wed June 24',
-    venue: 'The Rainbow Festival 2020'
-    cityState: 'Nashville, TN. USA',
-  },
-  {
-    date: 'Sun July 3',
-    venue: 'The Rain or shine Festival 2020'
-    cityState: 'Cincinnati, OH. USA',
-  },
-  {
-    date: 'Fri July 8',
-    venue: 'Dirt Fest 2020'
-    cityState: 'St Louis, MO. USA',
-  },
-  {
-    date: 'Fri July 23',
-    venue: 'Green Day Festival 2020'
-    cityState: 'Kankakee, IL. USA',
-  },
-  {
-    date: 'Fri Aug 1',
-    venue: 'Down On The Green 2020'
-    cityState: 'Atlanta, GA. USA',
-  },
-  {
-    date: 'Sun Aug 16',
-    venue: 'The Continental 2020'
-    cityState: 'Gainesville, Fl. USA',
-  },
-  {
-    date: 'Wed Aug 19',
-    venue: 'Gamble Arena 2020'
-    cityState: 'Indianapolis, ID. USA',
-  },
-];
+// const tourDates = [
+//   {
+//     date: 'Fri May 1',
+//     venue: 'Lambo Festival 2020'
+//     cityState: 'Atlanta, GA. USA',
+//   },
+//   {
+//     date: 'Mon June 10',
+//     venue: ' Summer Fest 2020'
+//     cityState: 'Chicago, IL. USA',
+//   },
+//   {
+//     date: 'Wed June 24',
+//     venue: 'The Rainbow Festival 2020'
+//     cityState: 'Nashville, TN. USA',
+//   },
+//   {
+//     date: 'Sun July 3',
+//     venue: 'The Rain or shine Festival 2020'
+//     cityState: 'Cincinnati, OH. USA',
+//   },
+//   {
+//     date: 'Fri July 8',
+//     venue: 'Dirt Fest 2020'
+//     cityState: 'St Louis, MO. USA',
+//   },
+//   {
+//     date: 'Fri July 23',
+//     venue: 'Green Day Festival 2020'
+//     cityState: 'Kankakee, IL. USA',
+//   },
+//   {
+//     date: 'Fri Aug 1',
+//     venue: 'Down On The Green 2020'
+//     cityState: 'Atlanta, GA. USA',
+//   },
+//   {
+//     date: 'Sun Aug 16',
+//     venue: 'The Continental 2020'
+//     cityState: 'Gainesville, Fl. USA',
+//   },
+//   {
+//     date: 'Wed Aug 19',
+//     venue: 'Gamble Arena 2020'
+//     cityState: 'Indianapolis, ID. USA',
+//   },
+// ];
