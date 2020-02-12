@@ -1,6 +1,6 @@
 .body-colors {
     background-color: black;
-    color: white;
+    /* color: white; */
 }
 
 h1, h2, h3, h4, h5 {
@@ -56,3 +56,60 @@ p {
     color: white;
     transform: rotateY(180deg);
   }
+
+/*----------------------------------------------------------------------------------- nav */
+
+
+.nav-link {
+    color: #fcff02;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-left: 10%;
+}
+
+.nav-item {
+    font-family: 'Alfa Slab One', cursive;
+    color: #fcff02;
+}
+/*----------------------------------------------------------------------------------- hero*/
+#hero img {
+    width: 100%;
+}
+
+#fan img {
+    width: 100%;
+}
+
+#disc img {
+ width: 100%;
+}
+
+#bio img {
+    
+    width: 100%;
+}
+
+#merch img {
+    
+    width: 100%;
+}
+
+/* -----------------------------------------------------------------footer */
+#footer {
+    color: #fcff02;
+}
+
+.social {
+    color: #fcff02;
+    font-size: 40px;
+}
