@@ -1,5 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .body-colors {
     background-color: black;
+    color: #fcff02;
     /* color: white; */
 }
 
@@ -66,6 +72,115 @@ h3 {
     color: white;
     transform: rotateY(180deg);
   }
+.de-h1 {
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.de-card {
+    margin: auto;
+    width: 363px;
+}
+
+.de-image {
+    width: 360px;
+    height: 360px;
+    margin: auto;
+}
+
+.de-card-divider {
+    margin: 45px 0;
+}
+
+.de-card-container {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.de-song-list {
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    color: #fcff02;
+}
+
+.de-song-print {
+    margin-top: 25px;
+}
+
+ [id='546873431995'] {
+    background: url(https://images.pexels.com/photos/2747893/pexels-photo-2747893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: 300px;
+    background-size: cover;
+    width: 360px;
+    height: 360px;
+}
+
+[id='546873431995']:hover {
+    filter: brightness(130%);
+}
+
+[id='469870952000'] {
+    background: url(https://images.pexels.com/photos/2514316/pexels-photo-2514316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: 300px;
+    background-size: cover;
+    width: 360px;
+    height: 360px;
+}
+
+[id='469870952000']:hover {
+    filter: brightness(130%);
+}
+
+[id='563423332006'] {
+    background: url(https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: 300px;
+    background-size: cover;
+    width: 360px;
+    height: 360px;
+}
+
+[id='563423332006']:hover {
+    filter: brightness(130%);
+}
+
+[id='445534222005'] {
+    background: url(https://images.pexels.com/photos/913215/pexels-photo-913215.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+    background-size: 300px;
+    background-size: cover;
+    width: 360px;
+    height: 360px;
+}
+
+[id='445534222005']:hover {
+    filter: brightness(130%);
+}
+
+[id='556476542003'] {
+    background: url(https://images.pexels.com/photos/627667/pexels-photo-627667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: 300px;
+    background-size: cover;
+    width: 360px;
+    height: 360px;
+}
+
+[id='556476542003']:hover {
+    filter: brightness(130%);
+}
+
+[id='445665432008'] {
+    background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: 300px;
+    background-size: cover;
+    width: 360px;
+    height: 360px;
+}
+
+[id='445665432008']:hover {
+    filter: brightness(130%);
+}
 
 /*----------------------------------------------------------------------------------- nav */
 
