@@ -43,21 +43,23 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint; 
 };
 
-bioCards = (list) => {
+const bioCards = (list) => {
     let domString = "";
     for (i=0; i<list.length; i++) {
-        domString += '<div class="flip-card">';
-        domString += '<div class="flip-card-inner">';
-        domString += '<div class="flip-card-front">';
-        domString += `<img src="${membersCards[i].image}" alt="${membersCards[i].alt}" style="width:300px;height:300px;">`;
+        domString += '<div class="d-flex flex-row mb-3 flex-wrap">';
+            domString += '<div class="flip-card">';
+                domString += '<div class="flip-card-inner">';
+                    domString += '<div class="flip-card-front">';
+                        domString += `<img src="${membersCards[i].image}" alt="${membersCards[i].alt}" style="width:300px;height:300px;">`;
+                    domString += '</div>';
+                    domString += '<div class="flip-card-back">';
+                        domString += `<h2>${membersCards[i].name}</h2>`;
+                        domString += `<h3>${membersCards[i].bandRole}</h3>`;
+                        domString += `<p>${membersCards[i].personalBio}</p>`;
+                    domString += '</div>';
+                domString += '</div>';
+            domString += '</div>';
         domString += '</div>';
-        domString += '<div class="flip-card-back">';
-        domString += `<h2>${membersCards[i].name</h2>`;
-        domString += `<h3>${membersCards[i].bandRole}</h3>`;
-        domString += `<p>${membersCards[i].personalBio}</p>`;
-        domString += '</div>';
-        domString =+ '</div>';
-        domString =+ '</div>';
     }
     printToDom("biographyContainer", domString)
 };
