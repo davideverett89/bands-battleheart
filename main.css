@@ -22,7 +22,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-  
+    
 }
 
 #navbar {
@@ -36,7 +36,28 @@ p {
     font-family: 'Alfa Slab One', cursive;
     color: #fcff02;
 }
+/*----------------------------------------------------------------------------------- hero*/
+#hero img {
+    width: 100%;
+}
 
+#fan img {
+    width: 100%;
+}
+
+#disc img {
+ width: 100%;
+}
+
+#bio img {
+    
+    width: 100%;
+}
+
+#merch img {
+    
+    width: 100%;
+}
 
 /* -----------------------------------------------------------------footer */
 #footer {
