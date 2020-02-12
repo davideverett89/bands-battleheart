@@ -1,12 +1,10 @@
-console.log("Battleheart");
-
 const membersCards = [
     {
     image: "https://images.pexels.com/photos/2614942/pexels-photo-2614942.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     alt: "Drummer playing the drums",
-    name: "Tommy Tonnel",
+    name: "Tommy O'Connor",
     bandRole: "Drums",
-    personalBio: "Tommy is one of the original founders of Battleheart."
+    personalBio: "Tommy is one of the original founders of Battleheart. He has loved music since before he was born. His mother loves to tell stories of how Tommy-in-the-womb would do tumbles for hours when she was around music with a good beat! Tommy inherited his love of music not only from his parents but also his grandfather who played guitar (and the bagpipes!) for The New Jersey Elves in the 50s-60s. He proudly continues the musical tradition of his Irish family and hopes to pass it on to this offspring one day. "
     },
    {
     image: "https://images.pexels.com/photos/1735240/pexels-photo-1735240.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -45,27 +43,25 @@ const printToDom = (divId, textToPrint) => {
 
 const bioCards = (list) => {
     let domString = "";
-    for (i=0; i<list.length; i++) {
-        domString += '<div class="container">';
-          domString += '<div class="row">';    
-            domString += '<div class="col-sm" width="30%">';  
+    for (i=0; i<list.length; i++) { 
+          domString += '<div class="col-md-6 col-lg-4 mb-5">';  
+            domString += '<div class="col-4">';  
               domString += '<div class="flip-card">';
                 domString += '<div class="flip-card-inner">';
-                    domString += '<div class="flip-card-front">';
-                      domString += `<img src="${membersCards[i].image}" alt="${membersCards[i].alt}" style="width:300px;height:300px;">`;
-                    domString += '</div>';
-                    domString += '<div class="flip-card-back">';
-                      domString += `<h2>${membersCards[i].name}</h2>`;
-                      domString += `<h3>${membersCards[i].bandRole}</h3>`;
-                      domString += `<p class="ars-bio"><small>${membersCards[i].personalBio}</small></p>`;
-                    domString += '</div>';
+                  domString += '<div class="flip-card-front">';
+                    domString += `<img src="${membersCards[i].image}" alt="${membersCards[i].alt}" style="width:300px;height:300px;">`;
+                  domString += '</div>';
+                  domString += '<div class="flip-card-back">';
+                    domString += `<h2>${membersCards[i].name}</h2>`;
+                    domString += `<h3>${membersCards[i].bandRole}</h3>`;
+                    domString += `<p class="ars-bio"><small>${membersCards[i].personalBio}</small></p>`;
                   domString += '</div>';
                 domString += '</div>';
               domString += '</div>';
             domString += '</div>';
-        domString += '</div>';
-    }
+          domString += '</div>';
     printToDom("biographyContainer", domString)
+    };
 };
 
 const init = () => {
