@@ -147,7 +147,7 @@ const dynamicEvent = () => {
 
 const showSongs = (e) => {
     let divArr = [];
-    let divId = e.target.id
+    let divId = e.target.id;
     for (let i = 0; i < albums.length; i++) {
         if (divId === `${albums[i].sku}${albums[i].releaseYear}`) {
             divArr.push(albums[i]);
