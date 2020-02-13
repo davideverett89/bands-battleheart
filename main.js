@@ -110,12 +110,6 @@ const albums = [
     },
 ];
 
-
-const printToDom = (divId, domString) => {
-    let targetDiv = document.getElementById(divId);
-    targetDiv.innerHTML = domString;
-}
-
 const printAlbumCards = (arr) => {
     let domString = "";
     for (let i = 0; i < arr.length; i++) {
@@ -211,8 +205,11 @@ const tourDates = [
 ];
 
 const init = () => {
-    printAlbumCards(albums);
-    bioCards(membersCards);
+    if (window.location.href === "http://localhost:8080/discography.html") {
+        printAlbumCards(albums);
+    } else if (window.location.href === "http://localhost:8080/bio.html") {
+        bioCards(membersCards);
+    }
 };
 
 init();
