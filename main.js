@@ -95,11 +95,11 @@ const albums = [
     sku: "55647654"
     },
     {
-        image: "https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        title: "New Dimension",
-        releaseYear: "2006",
-        songList: ["Iconoclast of Deliverance", "Particles of the Duos", "Silence through the Solstices of the Regeneration", "Extinguishing into Farce", "Piece through the Experiment of the Domain", "Still Limitations Enchanting",],
-        sku: "56342333"
+    image: "https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    title: "New Dimension",
+    releaseYear: "2006",
+    songList: ["Iconoclast of Deliverance", "Particles of the Duos", "Silence through the Solstices of the Regeneration", "Extinguishing into Farce", "Piece through the Experiment of the Domain", "Still Limitations Enchanting",],
+    sku: "56342333"
     },
     {
     image: "https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -227,5 +227,19 @@ const dateCards = (arr) => {
     printToDom("tour-dates", cardString);
   };
 };
-dateCards(tourDates);
+
+const init = () => {
+    if (window.location.href === "http://localhost:8080/dates.html") {
+        console.log("This worked");
+        dateCards(tourDates);
+    } else if (window.location.href === "http://localhost:8080/bio.html") {
+        console.log("This worked 2");
+        bioCards(membersCards);
+    } else if (window.location.href === "http://localhost:8080/discography.html") {
+        console.log("This worked 3");
+        printAlbumCards(albums);
+    }
+}
+
+init();
 
