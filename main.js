@@ -207,28 +207,25 @@ const tourDates = [
 
 
 
-const dateCards = () => {
+const dateCards = (arr) => {
   let cardString = '';
-  for (let i = 0; i < tourDates.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     cardString += '<div class="tourCards">';
     cardString += '<div>';
     cardString += '<hr class="card-lines">';
     cardString += '<div class="row col-md-10 offset-1">';
-    cardString += `<h4 class="col">${tourDates[i].date}</h4>`;
+    cardString += `<h4 class="col">${arr[i].date}</h4>`;
     cardString += '</div>';
     cardString += '<div class="row col-md-10 offset-1">';
-    cardString += `<h5 class="col">${tourDates[i].venue}</h5>`;
-    cardString += `<p class="col">${tourDates[i].cityState}</p>`;
+    cardString += `<h5 class="col">${arr[i].venue}</h5>`;
+    cardString += `<p class="col">${arr[i].cityState}</p>`;
     cardString += '<button class="btn btn-primary col-2">Get Tickets</button>';
     cardString += '</div>';
     cardString += '<hr class="card-lines">';
     cardString += '</div>';
     cardString += '</div>';
-
-    printToDom("tour-dates", cardString)
-
+    printToDom("tour-dates", cardString);
   };
-
 };
+dateCards(tourDates);
 
-dateCards();
