@@ -4,6 +4,7 @@ const membersCards = [
     alt: "Drummer playing the drums",
     name: "Tommy O'Connor",
     bandRole: "Drums",
+    age: 50,
     personalBio: "Tommy is one of the original founders of Battleheart. He has loved music since before he was born. His mother loves to tell stories of how Tommy-in-the-womb would do tumbles for hours when she was around music with a good beat! Tommy inherited his love of music not only from his parents but also his grandfather who played guitar (and the bagpipes!) for The New Jersey Elves in the 50s-60s. He proudly continues the musical tradition of his Irish family and hopes to pass it on to this offspring one day. "
     },
    {
@@ -11,6 +12,7 @@ const membersCards = [
     alt: "female guitarist",
     name: "Musique",
     bandRole: "Guitar and vocals",
+    age: 35,
     personalBio: "Musique has enjoyed singing since the age of 4 when she started presenting Christmas concerts at her family's get-togethers. She has studied music with Nadia Voltna and Michelle Mastery at the New York Conservatory where she graduated with honors in 2010. Musique has made a name for herself since her high school band Renaissance Gals auditioned on America's Got Talent. She continues to play with Renaissance Gals as well as Battleheart and enjoys the variety of opportunities each band brings. She is the newest member of Battleheart."
     },
    {
@@ -18,6 +20,7 @@ const membersCards = [
     alt: "Guitarist in mosh pit",
     name: "Luke Stavros",
     bandRole: "Electric guitar",
+    age: 48,
     personalBio: "Luke grew up in New Jersey and always loved music. Started guitar lessons after school in elementary school and hasn't stopped. Other bands he has been a member of are Rocky & Slimy and The Terrible 5. "
     },
    {
@@ -25,6 +28,7 @@ const membersCards = [
     alt: "keyboard player resting head on keyboard",
     name: "Paul Marcioni",
     bandRole: "Keyboard",
+    age: 38,
     personalBio: "Paul has been playing piano since high school when the girl he liked (at the time) confessed she loved to sing but could never find a good piano accompanist. He threw himself into learning how to play piano and became that accompanist for about 5 short months. Thankfully, his love of piano and keyboard has outlasted that early relationship. He plays out at a number of venues in the area as Piano Paul."
     },
    {
@@ -32,6 +36,7 @@ const membersCards = [
     alt: "Guitarist playing and singing",
     name: "Milan Freemont",
     bandRole: "Electric guitar and vocals",
+    age: 47,
     personalBio: "Milan was inspired to love and dedicate himself tolearn how to play guitar by Eric Clapton. Clapton's albums were the soundtrack of Milan's high school in a  dirty New Jersey high school that was fortunately brimming with a love of the arts and opportunities to perform and discover and develop one's talents. Milan met Luke and Tommy in high school, and Battleheart was born. The rest is history."
     }
 ];
@@ -53,7 +58,7 @@ const bioCards = (list) => {
                   domString += '</div>';
                   domString += '<div class="flip-card-back">';
                     domString += `<h2>${membersCards[i].name}</h2>`;
-                    domString += `<h3>${membersCards[i].bandRole}</h3>`;
+                    domString += `<h3>${membersCards[i].bandRole}, ${membersCards[i].age}</h3>`;
                     domString += `<p class="ars-bio"><small>${membersCards[i].personalBio}</small></p>`;
                   domString += '</div>';
                 domString += '</div>';
@@ -64,6 +69,53 @@ const bioCards = (list) => {
     };
 };
 
+const tourDates = [
+  {
+    date: 'Fri May 1',
+    venue: 'Lambo Festival 2020',
+    cityState: 'Atlanta, GA. USA',
+  },
+  {
+    date: 'Mon June 10',
+    venue: ' Summer Fest 2020',
+    cityState: 'Chicago, IL. USA',
+  },
+  {
+    date: 'Wed June 24',
+    venue: 'The Rainbow Festival 2020',
+    cityState: 'Nashville, TN. USA',
+  },
+  {
+    date: 'Sun July 3',
+    venue: 'The Rain or shine Festival 2020',
+    cityState: 'Cincinnati, OH. USA',
+  },
+  {
+    date: 'Fri July 8',
+    venue: 'Dirt Fest 2020',
+    cityState: 'St Louis, MO. USA',
+  },
+  {
+    date: 'Fri July 23',
+    venue: 'Green Day Festival 2020',
+    cityState: 'Kankakee, IL. USA',
+  },
+  {
+    date: 'Fri Aug 1',
+    venue: 'Down On The Green 2020',
+    cityState: 'Atlanta, GA. USA',
+  },
+  {
+    date: 'Sun Aug 16',
+    venue: 'The Continental 2020',
+    cityState: 'Gainesville, Fl. USA',
+  },
+  {
+    date: 'Wed Aug 19',
+    venue: 'Gamble Arena 2020',
+    cityState: 'Indianapolis, ID. USA',
+  },
+];
 
 const albums = [
     {
@@ -156,53 +208,6 @@ const showSongs = (e) => {
     printSongList(divArr, e);
 }
 
-const tourDates = [
-  {
-    date: 'Fri May 1',
-    venue: 'Lambo Festival 2020',
-    cityState: 'Atlanta, GA. USA',
-  },
-  {
-    date: 'Mon June 10',
-    venue: ' Summer Fest 2020',
-    cityState: 'Chicago, IL. USA',
-  },
-  {
-    date: 'Wed June 24',
-    venue: 'The Rainbow Festival 2020',
-    cityState: 'Nashville, TN. USA',
-  },
-  {
-    date: 'Sun July 3',
-    venue: 'The Rain or shine Festival 2020',
-    cityState: 'Cincinnati, OH. USA',
-  },
-  {
-    date: 'Fri July 8',
-    venue: 'Dirt Fest 2020',
-    cityState: 'St Louis, MO. USA',
-  },
-  {
-    date: 'Fri July 23',
-    venue: 'Green Day Festival 2020',
-    cityState: 'Kankakee, IL. USA',
-  },
-  {
-    date: 'Fri Aug 1',
-    venue: 'Down On The Green 2020',
-    cityState: 'Atlanta, GA. USA',
-  },
-  {
-    date: 'Sun Aug 16',
-    venue: 'The Continental 2020',
-    cityState: 'Gainesville, Fl. USA',
-  },
-  {
-    date: 'Wed Aug 19',
-    venue: 'Gamble Arena 2020',
-    cityState: 'Indianapolis, ID. USA',
-  },
-];
 
 
 
@@ -227,5 +232,19 @@ const dateCards = (arr) => {
     printToDom("tour-dates", cardString);
   };
 };
-dateCards(tourDates);
+
+const init = () => {
+  if (window.location.href === "http://localhost:8080/dates.html") {
+      console.log("This worked");
+      dateCards(tourDates);
+  } else if (window.location.href === "http://localhost:8080/bio.html") {
+      console.log("This worked 2");
+      bioCards(membersCards);
+  } else if (window.location.href === "http://localhost:8080/discography.html") {
+      console.log("This worked 3");
+      printAlbumCards(albums);
+  }
+};
+
+init();
 
