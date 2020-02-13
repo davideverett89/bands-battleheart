@@ -3,12 +3,23 @@
     /* color: white; */
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Alfa Slab One', cursive;
+    color: #fcff02;;
 }
 
 p {
     font-family: 'Lato', sans-serif;
+    
+}
+
+hr.card-lines {
+    border: 1px solid gray;
+    width: 95%;
 }
 
 
@@ -18,10 +29,12 @@ p {
 .nav-link {
     color: #fcff02;
 }
+
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: black;
     
 }
 
@@ -29,13 +42,15 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    padding-left: 10%;
+    /* padding-left: 10%; */
+    width: 100%;
 }
 
 .nav-item {
     font-family: 'Alfa Slab One', cursive;
     color: #fcff02;
 }
+
 /*----------------------------------------------------------------------------------- hero*/
 #hero img {
     width: 100%;
@@ -46,22 +61,33 @@ p {
 }
 
 #disc img {
- width: 100%;
+    width: 100%;
 }
 
 #bio img {
-    
+
     width: 100%;
 }
 
 #merch img {
-    
+
     width: 100%;
+}
+
+#tour-dates {
+    margin-bottom: 80px;
+}
+
+#tour-dates p {
+    color: white;
+
 }
 
 /* -----------------------------------------------------------------footer */
 #footer {
     color: #fcff02;
+    background-color: black;
+    margin-top: 20px;
 }
 
 .social {
