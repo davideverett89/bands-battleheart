@@ -8,11 +8,7 @@
     color: #fcff02;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
     font-family: 'Alfa Slab One', cursive;
     color: #fcff02;;
 }
@@ -55,7 +51,7 @@ h3 {
   }
   
   /* This container is needed to position the front and back side */
-  .flip-card-inner {
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -70,7 +66,7 @@ h3 {
   }
   
   /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+.flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -89,6 +85,7 @@ h3 {
     color: white;
     transform: rotateY(180deg);
   }
+
 .de-h1 {
     margin-top: 50px;
     text-decoration: underline;
@@ -134,6 +131,56 @@ h3 {
 hr.card-lines {
     border: 1px solid gray;
     width: 95%;
+}
+
+.de-h1 {
+    margin-top: 50px;
+    text-decoration: underline;
+}
+
+.de-card {
+    margin: auto;
+    width: 363px;
+}
+
+.de-image {
+    width: 360px;
+    height: 360px;
+    margin: auto;
+}
+
+.de-card-divider {
+    margin: 45px 0;
+}
+
+.de-card-container {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.de-song-list {
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    color: #fcff02;
+}
+
+.de-song-print {
+    margin-top: 25px;
+}
+
+.de-song-print h2 {
+    text-decoration: underline;
+}
+
+[id='546873431995'] {
+    background: url(https://images.pexels.com/photos/2747893/pexels-photo-2747893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: 300px;
+    background-size: cover;
+    width: 360px;
+    height: 360px;
 }
 
 [id='546873431995']:hover {
