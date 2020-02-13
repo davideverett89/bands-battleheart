@@ -64,62 +64,7 @@ const bioCards = (list) => {
     };
 };
 
-const init = () => {
-    bioCards(membersCards);
-};
 
-init();
-
-
-
-
-// const tourDates = [
-//   {
-//     date: 'Fri May 1',
-//     venue: 'Lambo Festival 2020'
-//     cityState: 'Atlanta, GA. USA',
-//   },
-//   {
-//     date: 'Mon June 10',
-//     venue: ' Summer Fest 2020'
-//     cityState: 'Chicago, IL. USA',
-//   },
-//   {
-//     date: 'Wed June 24',
-//     venue: 'The Rainbow Festival 2020'
-//     cityState: 'Nashville, TN. USA',
-//   },
-//   {
-//     date: 'Sun July 3',
-//     venue: 'The Rain or shine Festival 2020'
-//     cityState: 'Cincinnati, OH. USA',
-//   },
-//   {
-//     date: 'Fri July 8',
-//     venue: 'Dirt Fest 2020'
-//     cityState: 'St Louis, MO. USA',
-//   },
-//   {
-//     date: 'Fri July 23',
-//     venue: 'Green Day Festival 2020'
-//     cityState: 'Kankakee, IL. USA',
-//   },
-//   {
-//     date: 'Fri Aug 1',
-//     venue: 'Down On The Green 2020'
-//     cityState: 'Atlanta, GA. USA',
-//   },
-//   {
-//     date: 'Sun Aug 16',
-//     venue: 'The Continental 2020'
-//     cityState: 'Gainesville, Fl. USA',
-//   },
-//   {
-//     date: 'Wed Aug 19',
-//     venue: 'Gamble Arena 2020'
-//     cityState: 'Indianapolis, ID. USA',
-//   },
-// ];
 const albums = [
     {
     image: "https://images.pexels.com/photos/2747893/pexels-photo-2747893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -163,109 +108,108 @@ const albums = [
     songList: ["Defender of the Parlours", "Immortally Divided", "Twisted through the Wish of the Vanguard", "Echoes of Nomad", "Saving into Mists", "Expanded by Fractal"],
     sku: "44566543"
     },
-    ];
+];
 
-// const printToDom = (divId, domString) => {
-//     let targetDiv = document.getElementById(divId);
-//     targetDiv.innerHTML = domString;
-//     dynamicEvent();
-// }
+const printAlbumCards = (arr) => {
+    let domString = "";
+    for (let i = 0; i < arr.length; i++) {
+        domString += `<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 de-card-divider text-center">`;
+        domString +=    `<div id="${arr[i].sku}${arr[i].releaseYear}" class="card de-card de-song-list"></div>`;
+        domString += '</div>';
+    }
+    printToDom("albumContainer", domString);
+    dynamicEvent();
+}
 
-// const printAlbumCards = (arr) => {
-//     let domString = "";
-//     for (let i = 0; i < arr.length; i++) {
-//         domString += `<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 de-card-divider text-center">`;
-//         domString +=    `<div id="${arr[i].sku}${arr[i].releaseYear}" class="card de-card de-song-list"></div>`;
-//         domString += '</div>';
-//     }
-//     printToDom("albumContainer", domString);
-// }
+const printSongList = (arr, e) => {
+    let firstString = "";
+    let secondString = "";
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].songList.length; j++) {
+            firstString += `<p class="flex-grow-1">${arr[i].songList[j]}</p>`;
+        }
+        secondString += `<div class="d-inline-flex flex-column justify-content-around de-song-print"><h2>${arr[i].title}</h2>${firstString}<footer><p>Released: <strong>${arr[i].releaseYear}</strong></p></footer></div>`;
+    }
+    printToDom(e.target.id, secondString);
+}
 
-// const printSongList = (arr, e) => {
-//     let firstString = "";
-//     let secondString = "";
-//     for (let i = 0; i < arr.length; i++) {
-//         for (let j = 0; j < arr[i].songList.length; j++) {
-//             firstString += `<p class="flex-grow-1">${arr[i].songList[j]}</p>`;
-//         }
-//         secondString += `<div class="d-inline-flex flex-column justify-content-around de-song-print"><h2>${arr[i].title}</h2>${firstString}<footer><p>Released: <strong>${arr[i].releaseYear}</strong></p></footer></div>`;
-//     }
-//     printToDom(e.target.id, secondString);
-// }
+const refreshDom = () => {
+    printAlbumCards(albums);
+}
 
-// const refreshDom = () => {
-//     printAlbumCards(albums);
-// }
+const dynamicEvent = () => {
+    let divCollection = document.getElementsByClassName("de-card");
+    for (let i = 0; i < divCollection.length; i++) {
+        divCollection[i].addEventListener("mouseenter", showSongs);
+        divCollection[i].addEventListener("mouseleave", refreshDom);
+    }
+}
 
-// const dynamicEvent = () => {
-//     let divCollection = document.getElementsByClassName("de-card");
-//     for (let i = 0; i < divCollection.length; i++) {
-//         divCollection[i].addEventListener("mouseenter", showSongs);
-//         divCollection[i].addEventListener("mouseleave", refreshDom);
-//     }
-// }
+const showSongs = (e) => {
+    let divArr = [];
+    let divId = e.target.id;
+    for (let i = 0; i < albums.length; i++) {
+        if (divId === `${albums[i].sku}${albums[i].releaseYear}`) {
+            divArr.push(albums[i]);
+        }
+    }
+    printSongList(divArr, e);
+}
 
-// const showSongs = (e) => {
-//     let divArr = [];
-//     let divId = e.target.id
-//     for (let i = 0; i < albums.length; i++) {
-//         if (divId === `${albums[i].sku}${albums[i].releaseYear}`) {
-//             divArr.push(albums[i]);
-//         }
-//     }
-//     printSongList(divArr, e);
-// }
+const tourDates = [
+  {
+    date: 'Fri May 1',
+    venue: 'Lambo Festival 2020',
+    cityState: 'Atlanta, GA. USA',
+  },
+  {
+    date: 'Mon June 10',
+    venue: ' Summer Fest 2020',
+    cityState: 'Chicago, IL. USA',
+  },
+  {
+    date: 'Wed June 24',
+    venue: 'The Rainbow Festival 2020',
+    cityState: 'Nashville, TN. USA',
+  },
+  {
+    date: 'Sun July 3',
+    venue: 'The Rain or shine Festival 2020',
+    cityState: 'Cincinnati, OH. USA',
+  },
+  {
+    date: 'Fri July 8',
+    venue: 'Dirt Fest 2020',
+    cityState: 'St Louis, MO. USA',
+  },
+  {
+    date: 'Fri July 23',
+    venue: 'Green Day Festival 2020',
+    cityState: 'Kankakee, IL. USA',
+  },
+  {
+    date: 'Fri Aug 1',
+    venue: 'Down On The Green 2020',
+    cityState: 'Atlanta, GA. USA',
+  },
+  {
+    date: 'Sun Aug 16',
+    venue: 'The Continental 2020',
+    cityState: 'Gainesville, Fl. USA',
+  },
+  {
+    date: 'Wed Aug 19',
+    venue: 'Gamble Arena 2020',
+    cityState: 'Indianapolis, ID. USA',
+  },
+];
 
-// const tourDates = [
-//   {
-//     date: 'Fri May 1',
-//     venue: 'Lambo Festival 2020',
-//     cityState: 'Atlanta, GA. USA',
-//   },
-//   {
-//     date: 'Mon June 10',
-//     venue: ' Summer Fest 2020',
-//     cityState: 'Chicago, IL. USA',
-//   },
-//   {
-//     date: 'Wed June 24',
-//     venue: 'The Rainbow Festival 2020',
-//     cityState: 'Nashville, TN. USA',
-//   },
-//   {
-//     date: 'Sun July 3',
-//     venue: 'The Rain or shine Festival 2020',
-//     cityState: 'Cincinnati, OH. USA',
-//   },
-//   {
-//     date: 'Fri July 8',
-//     venue: 'Dirt Fest 2020',
-//     cityState: 'St Louis, MO. USA',
-//   },
-//   {
-//     date: 'Fri July 23',
-//     venue: 'Green Day Festival 2020',
-//     cityState: 'Kankakee, IL. USA',
-//   },
-//   {
-//     date: 'Fri Aug 1',
-//     venue: 'Down On The Green 2020',
-//     cityState: 'Atlanta, GA. USA',
-//   },
-//   {
-//     date: 'Sun Aug 16',
-//     venue: 'The Continental 2020',
-//     cityState: 'Gainesville, Fl. USA',
-//   },
-//   {
-//     date: 'Wed Aug 19',
-//     venue: 'Gamble Arena 2020',
-//     cityState: 'Indianapolis, ID. USA',
-//   },
-// ];
+const init = () => {
+    if (window.location.href === "http://localhost:8080/discography.html") {
+        printAlbumCards(albums);
+    } else if (window.location.href === "http://localhost:8080/bio.html") {
+        bioCards(membersCards);
+    }
+};
 
-// const init = () => {
-//     printAlbumCards(albums);
-// }
-
-// init();
+init();

@@ -87,7 +87,7 @@ h3 {
     transform: rotateY(180deg);
   }
 .de-h1 {
-    margin-top: 20px;
+    margin-top: 50px;
     text-decoration: underline;
 }
 
@@ -122,6 +122,10 @@ h3 {
 
 .de-song-print {
     margin-top: 25px;
+}
+
+.de-song-print h2 {
+    text-decoration: underline;
 }
 
  [id='546873431995'] {
