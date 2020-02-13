@@ -46,9 +46,7 @@ const tourDates = [
   },
 ];
 
-const printToDom = (toPrint, divId) => {
-  document.getElementById(divId).innerHTML = toPrint;
-};
+
 
 
 const dateCards = () => {
