@@ -40,9 +40,8 @@ h3 {
     line-height: 1em;
 }
 
-.ars-centered-div {
-    margin: 0 auto;
-    width: 90%;
+#biographyContainer {
+    margin-bottom: 80px;
 }
 
 /* FLIP CARD CSS INFO BELOW FROM HERE: https://www.w3schools.com/howto/howto_css_flip_card.asp

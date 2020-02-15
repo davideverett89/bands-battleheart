@@ -49,7 +49,7 @@ const printToDom = (divId, textToPrint) => {
 const bioCards = (list) => {
     let domString = "";
     for (i=0; i<list.length; i++) { 
-          domString += '<div class="col-md-6 col-lg-4 mb-5 text-center justify-content-center">';  
+          domString += '<div class="col-md-6 col-lg-4 mb-5">';  
               domString += '<div class="flip-card">';
                 domString += '<div class="flip-card-inner">';
                   domString += '<div class="flip-card-front">';
