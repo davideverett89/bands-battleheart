@@ -53,6 +53,7 @@ h3 {
     height: 300px;
     border: 3px solid grey;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin: 0 auto;
   }
   
   /* This container is needed to position the front and back side */
