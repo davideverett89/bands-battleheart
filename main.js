@@ -41,32 +41,6 @@ const membersCards = [
   }
 ];
 
-const printToDom = (divId, textToPrint) => {
-  const selectedDiv = document.getElementById(divId);
-  selectedDiv.innerHTML = textToPrint;
-};
-
-const bioCards = (list) => {
-    let domString = "";
-    for (i=0; i<list.length; i++) { 
-          domString += '<div class="col-md-6 col-lg-4 mb-5">';  
-              domString += '<div class="flip-card">';
-                domString += '<div class="flip-card-inner">';
-                  domString += '<div class="flip-card-front">';
-                    domString += `<img src="${membersCards[i].image}" alt="${membersCards[i].alt}" style="width:300px;height:300px;">`;
-                  domString += '</div>';
-                  domString += '<div class="flip-card-back">';
-                    domString += `<h2>${membersCards[i].name}</h2>`;
-                    domString += `<h3>${membersCards[i].bandRole}, ${membersCards[i].age}</h3>`;
-                    domString += `<p class="ars-bio"><small>${membersCards[i].personalBio}</small></p>`;
-                  domString += '</div>';
-                domString += '</div>';
-              domString += '</div>';
-          domString += '</div>';
-  };
-  printToDom("biographyContainer", domString)
-};
-
 const tourDates = [
   {
     date: 'Fri May 1',
@@ -117,48 +91,70 @@ const tourDates = [
 
 const albums = [
   {
-    image: "https://images.pexels.com/photos/2747893/pexels-photo-2747893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Battleground",
     releaseYear: "1995",
     songList: ["Clandestinely Ruled", "I Am Crazy", "Mythological Leavens Shinning", "Frost through the Ascent of the Mediocrity", "Landed into Apathy", "Rant the Puzzling Dogma of the Acorns"],
     sku: "54687343"
   },
   {
-    image: "https://images.pexels.com/photos/2514316/pexels-photo-2514316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Battleborn",
     releaseYear: "2000",
     songList: ["Profusely Anguished", "Sown Alchemist Sighting", "Really Shallowed", "Bringing into Sunsets", "Unfortunately Rusted", "Disgraced by Might"],
     sku: "46987095"
   },
   {
-    image: "https://images.pexels.com/photos/913215/pexels-photo-913215.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     title: "Take Cover",
     releaseYear: "2005",
     songList: ["Incarnated by Oceans", "Flickering into Invitation", "Flames of the Gloom", "Trained into Jams", "Unreleased Concession Uprising", "Mysterion of Case"],
     sku: "44553422"
   },
   {
-    image: "https://images.pexels.com/photos/627667/pexels-photo-627667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Cat Got Your Tongue",
     releaseYear: "2003",
     songList: ["Servants of the Plenitude", "Presumed into Symmetry", "Quick Harvester Whispering", "Crusader of the Consequences", "Heavily Scorched", "Recollection of Compromise"],
     sku: "55647654"
   },
   {
-    image: "https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "New Dimension",
     releaseYear: "2006",
     songList: ["Iconoclast of Deliverance", "Particles of the Duos", "Silence through the Solstices of the Regeneration", "Extinguishing into Farce", "Piece through the Experiment of the Domain", "Still Limitations Enchanting",],
     sku: "56342333"
   },
   {
-    image: "https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Catch TwentyThree",
     releaseYear: "2008",
     songList: ["Defender of the Parlours", "Immortally Divided", "Twisted through the Wish of the Vanguard", "Echoes of Nomad", "Saving into Mists", "Expanded by Fractal"],
     sku: "44566543"
   },
 ];
+
+const printToDom = (divId, textToPrint) => {
+  const selectedDiv = document.getElementById(divId);
+  selectedDiv.innerHTML = textToPrint;
+};
+
+const bioCards = (list) => {
+    let domString = "";
+    for (i=0; i<list.length; i++) { 
+          domString += '<div class="col-md-6 col-lg-4 mb-5">';  
+              domString += '<div class="flip-card">';
+                domString += '<div class="flip-card-inner">';
+                  domString += '<div class="flip-card-front">';
+                    domString += `<img src="${membersCards[i].image}" alt="${membersCards[i].alt}" style="width:300px;height:300px;">`;
+                  domString += '</div>';
+                  domString += '<div class="flip-card-back">';
+                    domString += `<h2>${membersCards[i].name}</h2>`;
+                    domString += `<h3>${membersCards[i].bandRole}, ${membersCards[i].age}</h3>`;
+                    domString += `<p class="ars-bio"><small>${membersCards[i].personalBio}</small></p>`;
+                  domString += '</div>';
+                domString += '</div>';
+              domString += '</div>';
+          domString += '</div>';
+  };
+  printToDom("biographyContainer", domString)
+};
+
+
 
 const printAlbumCards = (arr) => {
   let domString = "";
@@ -206,10 +202,6 @@ const showSongs = (e) => {
   printSongList(divArr, e);
 }
 
-
-
-
-
 const dateCards = (arr) => {
   let cardString = '';
   for (let i = 0; i < arr.length; i++) {
@@ -231,16 +223,41 @@ const dateCards = (arr) => {
   };
 };
 
+const submitAlert = () => {
+  let name = document.getElementById("inputName").value;
+  let email = document.getElementById("inputEmail").value;
+  let address = document.getElementById("inputAddress").value;
+  let city = document.getElementById("inputCity").value;
+  let state = document.getElementById("inputState").value;
+  let zip = document.getElementById("inputZip").value;
+  let check = [name, email, address, city, state, zip].some(function(x) {
+    return /^\s+$/.test(x) || x === "";
+  });
+  if (check) {
+    alert("Please fill out all fields");
+  } else {
+    alert(`Name: ${name}, Email: ${email}, Address: ${address}, City: ${city}, State: ${state}, ZIP: ${zip}`);
+  }
+  document.getElementById("join-form").reset();
+}
+
+const formButton = () => {
+  document.getElementById("newSubmit").addEventListener("click", function(e) {
+    e.preventDefault();
+    submitAlert();
+  });
+}
+
 const init = () => {
-  if (window.location.pathname === "/dates.html") {
-    console.log("This worked");
+  let currentPage = window.location.pathname;
+  if (currentPage === "/dates.html") {
     dateCards(tourDates);
-  } else if (window.location.pathname === "/bio.html") {
-    console.log("This worked 2");
+  } else if (currentPage === "/bio.html") {
     bioCards(membersCards);
-  } else if (window.location.pathname === "/discography.html") {
-    console.log("This worked 3");
+  } else if (currentPage === "/discography.html") {
     printAlbumCards(albums);
+  } else if (currentPage === "/join.html") {
+    formButton();
   }
 }
 

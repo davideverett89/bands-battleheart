@@ -21,10 +21,6 @@ h3 {
     font-style: italic;
 }
 
-.ars-short-div {
-    margin-top: 300px;
-}
-
 .ars-primaryimage {
     z-index: 1;
 }
@@ -61,6 +57,10 @@ h3 {
 }
 
 #biographyContainer {
+    margin-bottom: 80px;
+}
+
+#albumContainer {
     margin-bottom: 80px;
 }
 
