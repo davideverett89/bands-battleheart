@@ -272,6 +272,33 @@ hr.card-lines {
     filter: brightness(130%);
 }
 
+/*----------------------------------------------------------------------------------- index */
+.index-button .btn{
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+   border-radius: 30px;
+   background-color: black;
+   border-color:#fcff02;
+   color: #fcff02;
+    z-index: 4;
+}
+.index-button .bt2{
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+   border-radius: 30px;
+   background-color: black;
+   border-color:#fcff02;
+   color: #fcff02;
+    z-index: 4;
+}
+
+
 /*----------------------------------------------------------------------------------- nav */
 
 
@@ -299,6 +326,13 @@ hr.card-lines {
     font-family: 'Alfa Slab One', cursive;
     color: #fcff02;
 }
+
+/*----------------------------------------------------------------------------------- merch*/
+
+.merch {
+    margin-top: 60px;
+}
+
 
 /*----------------------------------------------------------------------------------- hero*/
 #hero img {
@@ -330,6 +364,11 @@ hr.card-lines {
 #tour-dates p {
     color: white;
 
+}
+
+/* -----------------------------------------------------------------contact form */
+.contact {
+    margin: 300px;
 }
 
 /* -----------------------------------------------------------------footer */
