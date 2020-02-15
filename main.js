@@ -11,7 +11,7 @@ const membersCards = [
     image: "https://images.pexels.com/photos/1735240/pexels-photo-1735240.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     alt: "female guitarist",
     name: "Musique",
-    bandRole: "Guitar and vocals",
+    bandRole: "Guitar & vocals",
     age: 35,
     personalBio: "Musique has enjoyed singing since the age of 4 when she started presenting Christmas concerts at her family's get-togethers. She has studied music with Nadia Voltna and Michelle Mastery at the New York Conservatory where she graduated with honors in 2010. Musique has made a name for herself since her high school band Renaissance Gals auditioned on America's Got Talent. She continues to play with Renaissance Gals as well as Battleheart and enjoys the variety of opportunities each band brings. She is the newest member of Battleheart."
   },
@@ -35,7 +35,7 @@ const membersCards = [
     image: "https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     alt: "Guitarist playing and singing",
     name: "Milan Freemont",
-    bandRole: "Electric guitar and vocals",
+    bandRole: "Electric guitar & vocals",
     age: 47,
     personalBio: "Milan was inspired to love and dedicate himself tolearn how to play guitar by Eric Clapton. Clapton's albums were the soundtrack of Milan's high school in a  dirty New Jersey high school that was fortunately brimming with a love of the arts and opportunities to perform and discover and develop one's talents. Milan met Luke and Tommy in high school, and Battleheart was born. The rest is history."
   }
@@ -49,7 +49,7 @@ const printToDom = (divId, textToPrint) => {
 const bioCards = (list) => {
     let domString = "";
     for (i=0; i<list.length; i++) { 
-          domString += '<div class="col-md-6 col-lg-4 mb-5">';  
+          domString += '<div class="col-md-6 col-lg-4 mb-5 text-center justify-content-center">';  
             domString += '<div class="col-4">';  
               domString += '<div class="flip-card">';
                 domString += '<div class="flip-card-inner">';
