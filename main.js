@@ -219,7 +219,7 @@ const dateCards = (arr) => {
     cardString += '<div class="row col-md-10 offset-1">';
     cardString += `<h5 class="col">${arr[i].venue}</h5>`;
     cardString += `<p class="col">${arr[i].cityState}</p>`;
-    cardString += '<button class="btn btn-primary col-2">Get Tickets</button>';
+    cardString += '<a class="btn btn-primary col-2" href="https://tickets-centers.com/?gclid=Cj0KCQiAyp7yBRCwARIsABfQsnRpG63_RnH82T0yYTd5ufRB7jiCf4pNV7Agcd0v8s3PrDVi4h3BWjYaAjfcEALw_wcB">Get Tickets</a>';
     cardString += '</div>';
     cardString += '<hr class="card-lines">';
     cardString += '</div>';
