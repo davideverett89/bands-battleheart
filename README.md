@@ -3,8 +3,6 @@
 ## Description
 This project was our cohort’s first group project and our introduction to using Github for project planning, planning out development tickets, writing user stories and development notes, and tracking each ticket throughout the development cycle. This project was also an exercise in managing different team members’ code in the same codebase and handling the conflicts that inevitably came up throughout the project. For this project, we built a website for a music band, using Bootstrap, CSS, HTML, and Javascript, and learning how to manage calls for multiple HTML pages in a single Javascript file.
 
-## Personal Contribution
-I worked on the Bio site, which displays a brief history of the band and a biography and photo of each band member, as well as on the Fans page. I had fun introducing flip cards for the Bio page and learning about overlaying elements on the Fans page.
 
 ## Background
 Project instructions can be found here: https://github.com/nss-evening-cohort-11/bands-battleheart/blob/master/instructions.md.
