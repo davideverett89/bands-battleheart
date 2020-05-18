@@ -29,7 +29,7 @@ We used CSS Flexbox for organizing our data, such as the biography cards, and Fo
 ![Discography Page](./img_band/disc_page.png)
 
 ## Technologies & Tools
-Bootstrap, CSS, Github, HTML5, Javascript
+Bootstrap, CSS, Github, HTML5, Vanilla Javascript
 
 ## Contributors
 * David Everett
