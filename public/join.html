@@ -19,14 +19,13 @@
     rel="stylesheet"/>
 
     <link rel="stylesheet" href="./main.css" />
-    <title>Biography</title>
+    <title>News Letter</title>
   </head>
   <body class="body-colors">
     <!---------------------------------------------------------------------- nav -->
     <section id="navbar">
       <nav
-        class="navbar navbar-expand-lg navbar-light bg-black justify-content-center sticky-top"
-      >
+        class="navbar navbar-expand-lg navbar-light navbar-inverse justify-content-center sticky-top">
         <ul class="nav ml">
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Home</a>
@@ -37,10 +36,10 @@
           <li class="nav-item">
             <a class="nav-link" href="fan.html">Fans</a>
           </li>
-          <a href="#"><img src="/img_band/logo.png" style="width: 100px"/></a>
+          <a href="#"><img src="https://res.cloudinary.com/nashville-software-school/image/upload/v1596826392/ecwo6ogv/logo_jn6s1v.png" style="width: 100px"/></a>
 
           <li class="nav-item">
-            <a class="nav-link" href="dates.html">Tour Dates</a>
+            <a class="nav-link navbar-btn" href="dates.html">Tour Dates</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="discography.html">Discography</a>
@@ -51,22 +50,53 @@
         </ul>
       </nav>
     </section>
-    
-    <!---------------------------------------------------------------------- Dom Area -->
-<section id="bio">
-  <img src="/img_band/bio.png" alt="">
-
-</section>
-
-<div>
-  <h1 class="text-center de-h1">Our History</h1>
-  <p class="text-center m-5">Battleheart was founded by a mutual desire to give the people good fun music that would speak to their soul and bodies. Since their initial high school days where philosophy and social justice classes drew them more than math and science, Tommy, Luke, and Milan have never stopped wanting to learn more, have pushed themselves into new territories musically (and otherwise!), and have continuously challenged each other to improve their joint artistic creation.</p>
-</div>
-<div id="biographyContainer" class="d-flex flex-wrap justify-content-around"></div>
-
 
     <!---------------------------------------------------------------------- Dom Area -->
+    <section>
+
+      <form id="join-form" class="contact">
+        <h1 class="text-center">Join The Band</h1>
+        <br>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit praesentium mollitia consequatur aliquid repellendus, maxime dignissimos adipisci accusamus veritatis consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores assumenda nulla necessitatibus, optio recusandae consequuntur, sint dolore commodi doloribus, nihil perferendis.  Lorm 
+          Quidem excepturi exercitationem eaque tempore quod veritatis ut sit? itaque blanditiis soluta quidem aperiam ab. Ratione velit similique adipisci!</p>
+        <br>
+          <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Name</label>
+            <input type="name" class="form-control" id="inputName">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail">
+          </div>
+        </div>
+       
+        <div class="form-group col-md-12">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <input type="text" class="form-control" id="inputState">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
     
+        <button id="newSubmit" type="button" class="btn btn-primary">Submit</button>
+      </form>
+
+
+    
+    </section>
+
     <!---------------------------------------------------------------------- footer -->
     <section id="footer" class="fixed-bottom">
       <div class="footer">
